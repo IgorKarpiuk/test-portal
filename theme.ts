@@ -148,8 +148,8 @@ export const theme = {
       fontSize: '13px',
       fontFamily: '"Source Code Pro", sans-serif',
       // fontWeight: ({ typography }) => typography.fontWeightRegular,
-      color: '#e53935',
-      backgroundColor: 'rgba(38, 50, 56, 0.04)',
+      color: '#dad204',
+      backgroundColor: 'rgba(2,103,155,0.72)',
       wrap: false,
     },
     links: {

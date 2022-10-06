@@ -1,0 +1,55 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: Example.com
+  description: info,
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+security: []
+tags:
+  - name: Echo
+    description: Example echo operations.
+  - name: User
+    description: Operations about users.
+  - name: Tag
+    description: This is a tag description.
+servers:
+  - url: 'https://example.com/api/v1'
+paths:
+  '/users/{username}':
+    parameters:
+      - name: pretty_print
+        in: query
+        description: Pretty print response
+        schema:
+          type: boolean
+    get:
+      tags:
+        - User
+      summary: Get user by user name
+      description: Some
+      operationId: getUserByName
+      parameters:
+        - name: username
+          in: path
+          description: The name that needs to be fetched
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: bad request
+components:
+  schemas:
+    test:
+      type: object
+      title: Scalars
+      properties:
+        nullableOrStringProperty:
+          description: Property name's description
+          type:
+            - string
+            - foo

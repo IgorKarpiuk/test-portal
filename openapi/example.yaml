@@ -52,4 +52,4 @@ components:
           description: Property name's description
           type:
             - string
-            - foo
+            - object
